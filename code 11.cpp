@@ -1,0 +1,17 @@
+// transform_example.cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    vector<int> v = {1,2,3,4,5};
+    // multiply each by 3 and add index
+    transform(v.begin(), v.end(), v.begin(),
+        [i = 0](int x) mutable { return x * 3 + i++; });
+
+    for (int x : v) cout << x << ' ';
+    cout << '\n';
+    return 0;
+}
