@@ -1,73 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Today i will show you about me and the skill i have">
-    <link rel="shortcut icon" href="img/cas.png" type="image/x-icon">
-    <title>Kashfeet First Website</title>
+    <meta name="author" content="Dave Gray">
+    <meta name="description" content="This page contains all the things I am learning how to create as I learn HTML.">
+    <title>My First Web Page</title>
+    <link rel="icon" href="html5.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css" type="text/css">
 </head>
+
 <body>
-    <h1>My Goal for the year</h1>
+    <h1>My Goals for the Year</h1>
+
     <hr>
-    <ul>
-        <li><a href="#html">Learn HTML</a></li>
-        <li><a href="#vacation">Planning Vaction</a></li>
-    </ul>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#html">Learning HTML</a>
+            </li>
+            <li>
+                <a href="#vacation">Planning a Vacation</a>
+            </li>
+        </ul>
+    </nav>
+
     <hr>
+
     <section id="html">
-    <h2>I am Ready to Learn HTML</h2>
-    <p>
-        this is my first Website
-    </p>
-    <img src="html_logo_300x300.png" alt="HTML Photo" title="I am learning HTML" width="200" height="200">
-    <figcaption>An Example of HTML5</figcaption>
-    &lt;h1&gt; Hello World! &lt;/h1&gt;
-    <h2>My Daily Schedule</h2>
-    <p>Let tell you how:</p>
-    <ol>
-        <li>I learn more about web development</li>
-        <li>I Plan out my schedule</li>
-        <li>I use resource from <abbr title=" Mobile divice Network "><a href="https://google.com">MDN</a></abbr>.</li>
-    </ol>
+        <h2>I'm Ready to Learn HTML</h2>
+        <p>This is my first web page.</p>
+        <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5" width="200" height="200">
+        <figure>
+            <figcaption>An Example of HTML5 code</figcaption>
+            <p>
+                <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+            </p>
+        </figure>
+        <h3>My Daily Schedule</h3>
+        <p>Let me tell you how:</p>
+        <ol>
+            <li>...I learn more about web dev.</li>
+            <li>...I plan out my schedule.</li>
+            <li>...I use resources from <abbr title="Mozilla Developer Network">
+                    <a href="https://developer.mozilla.org/">MDN</a>
+                </abbr>.</li>
+        </ol>
     </section>
+
     <hr>
+
     <section id="vacation">
-    <h2>I am aslo planing a Vacation</h2>
-    <p>I've been working hard and really need a getaway</p>
-    <p>I live in <abbr title="Kashfeet Sons">KS</abbr> so I want visit a beach</p>
-    <h3>Place I'd Like to visit.</h3>
-    <ul>
-        <li>I've good thing about carabieen.</li>
-        <br>
-        <img src="caribbean.jpg" alt="carrabien Beach" title="I want to visit a caribean beach" width="400" height="225">
-        <figcaption>Carabieen Beach Gateway</figcaption>
-        <br>
-        <address>Muhammadi Town hourse # 190-A <br>
-                 street # 2 near Pepsi Agenci <br>
-                 Arifwala</address>
-                 <br>
-        <li>I have hear goo thing about goint here:</li>
-        <br>
-        <img src="vacation.jpg" alt="Vaction" title="It is 5'0'clock somewher!" width="400" height="267">
-                <figcaption>This is Vacation website organizer</figcaption>
-                <br>
-          <address>Gulshan e Raheem House # 80 <br>
-                 near dewan super store burewala <br>
-                 postal code 61010</address>
-        <h3>Place where we want to avoid</h3>
+        <h2>I Am Also Planning a Vacation</h2>
+        <p>I've been working hard and <em>really need a getaway</em>.</p>
+        <p>I live in <abbr title="Kansas">KS</abbr> so I want visit a beach.</p>
+
+        <h3>Places I'd Like to Visit</h3>
+        <ul>
+            <li>
+                <p>I've heard good things about the Caribbean.</p>
+                <figure>
+                    <img src="img/caribbean.jpg" alt="Caribbean Beach" title="I want to visit a Caribbean beach."
+                        width="400" height="225">
+                    <figcaption>
+                        Caribbean Beach Getaway
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <p>I've heard good things about going here:</p>
+                <address>
+                    Margaritaville Island Reserve Riviera Cancún<br>
+                    Bahia Petempich Puerto Morelos, Mexico<br>
+                    Colonia Morelos, México 77580
+                </address>
+                <figure>
+                    <img src="img/vacation.jpg" alt="Cancun Vacation" title="It's 5 o'Clock Somewhere!" width="400"
+                        height="267">
+                    <figcaption>
+                        A Caribbean Vacation Image
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+        <!-- TODO: Add more places -->
+        <h3>Places I Want to Avoid</h3>
         <dl>
-            <dt>Noth Pole</dt>
-            <dd>I hear this is <strong>Cold</strong></dd>
+            <dt>North Pole</dt>
+            <dd>I hear this is <strong>cold</strong>!</dd>
+
             <dt>South Pole</dt>
-            <dd>This is also Cold</dd>
-            <dt>Mountain</dt>
-            <dd>These are also cold</dd>
+            <dd>This is also cold.</dd>
+
+            <dt>Mountain Tops</dt>
+            <dd>These are also cold.</dd>
         </dl>
-    </ul>
     </section>
+
     <hr>
-    &lt;&lt;&lt;&copy;<a href="aboutme.html">Kashfeet Raza</a>&gt;&gt;&gt;
-    <p><a href="#">Back on Top</a></p>
+    &lt;&lt;&lt; &copy; <a href="about.html">Dave Gray</a> &gt;&gt;&gt;
+    <p>
+        <a href="#">Back to Top</a>
+    </p>
+    
 </body>
+
 </html>
