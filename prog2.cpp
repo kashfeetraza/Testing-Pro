@@ -1,34 +1,35 @@
-#include <iostream>
-using namespace std;
+#include <iostream>  // Includes standard input/output stream
+using namespace std; // Allows usage of standard namespace (e.g., cout) without prefix
 
-// Base class: Vehicle
-class Vehicle {
+// Global function to calculate and display the area of a rectangle
+void rectangle_area(int length, int width) {
+    cout << "Area of Rectangle: " << length * width << endl;
+}
+
+// Definition of the Rectangle class
+class Rectangle {
+private:
+    // Private data members to store rectangle dimensions
+    int length, width;
+
 public:
-    Vehicle(string type) {
-        cout << "Vehicle type: " << type << endl;
+    // Public method to set the values of length and width
+    void input(int l, int w) {
+        length = l;
+        width = w;
     }
-};
 
-// Intermediate derived class: Car inherits from Vehicle
-class Car : public Vehicle {
-public:
-    Car(string model) : Vehicle("Four Wheeler") {
-        cout << "Car model: " << model << endl;
-    }
-};
-
-// Final derived class: ElectricCar inherits from Car
-class ElectricCar : public Car {
-public:
-    ElectricCar(string brand) : Car("Sedan") {
-        cout << "Electric Car brand: " << brand << endl;
+    // Public method to compute the area using the global function
+    void area() {
+        // Calls the global rectangle_area function with current object's dimensions
+        rectangle_area(length, width);
     }
 };
 
 int main() {
-    // Constructor chain: Vehicle ? Car ? ElectricCar
-    ElectricCar e("Tesla");
-
-    return 0;
+    Rectangle r;       // Create an object of class Rectangle
+    r.input(5, 3);     // Set length = 5 and width = 3 using the input() method
+    r.area();          // Compute and print the area using the area() method
+    return 0;          // Exit the program
 }
 
