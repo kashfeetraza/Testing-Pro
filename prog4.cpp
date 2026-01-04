@@ -1,33 +1,31 @@
-#include <iostream>
-using namespace std;
+/*
+4. Program: Simple Bank Account Class
+Statement: Define a class BankAccount with account holder’s name and balance. Show account details using a method.
+*/
 
-// Base class A
-class A {
-private:
-    int x = 5;         // Private: not accessible outside class
-protected:
-    int y = 10;        // Protected: accessible in derived class
+#include <iostream>   // Include input/output stream for console operations
+using namespace std;  // Use the standard namespace to avoid std:: prefix
+
+// Definition of the BankAccount class
+class BankAccount {
 public:
-    int z = 15;        // Public: accessible everywhere
+    // Public member variables for account holder's name and account balance
+    string holderName;
+    double balance;
 
-    void display() {
-        cout << "x: " << x << ", y: " << y << ", z: " << z << endl;
-    }
-};
-
-// Derived class B inherits from A
-class B : public A {
-public:
-    void show() {
-        // cout << x; // Error: 'x' is private in A
-        cout << "y: " << y << ", z: " << z << endl;
+    // Method to display account details
+    void displayDetails() {
+        cout << "Account Holder: " << holderName << endl;
+        cout << "Balance: $" << balance << endl;
     }
 };
 
 int main() {
-    B b;
-    b.show();
+    BankAccount acc1;          // Create an instance of BankAccount named acc1
+    acc1.holderName = "John Doe";  // Set the account holder's name
+    acc1.balance = 1500.75;         // Set the initial account balance
 
-    return 0;
+    acc1.displayDetails();     // Call method to display account details
+    return 0;                 // Return 0 to indicate successful execution
 }
 
