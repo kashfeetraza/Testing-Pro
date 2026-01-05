@@ -1,30 +1,29 @@
 #include <iostream>
 using namespace std;
 
-class Engine {
-public:
-    Engine() {
-        cout << "Engine initialized.\n";
-    }
-};
+// A normal (global) function, NOT a member of any class
+void show(string brand, string model) {
+    cout << "Brand: " << brand << ", Model: " << model << endl;
+}
 
-class Wheels {
+class Car {
 public:
-    Wheels() {
-        cout << "Wheels initialized.\n";
-    }
-};
+    string brand;  // Public member variable for the brand of the car
+    string model;  // Public member variable for the model of the car
 
-class Car : public Engine, public Wheels {
-public:
-    Car() {
-        cout << "Car is ready.\n";
+    void showDetails() {
+        // Calls the global function 'show' with this object's brand and model
+        show(brand, model);
     }
 };
 
 int main() {
-    Car myCar;  // Constructor order: Engine ? Wheels ? Car
+    Car c1;               // Create an object of class Car
+    c1.brand = "Toyota";  // Set brand
+    c1.model = "Corolla"; // Set model
 
-    return 0;
+    c1.showDetails();     // Call method to display details (which calls the global show function)
+
+    return 0;             // Exit program successfully
 }
 
