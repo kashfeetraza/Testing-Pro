@@ -1,24 +1,37 @@
-#include <iostream>
-using namespace std;
+#include <iostream>  // Include input/output stream for console operations
+using namespace std; // Use the standard namespace to avoid std:: prefix
 
-// Base class with protected member
-class Base {
-protected:
-    int a = 42;
-};
-
-// Derived class accessing protected member
-class Derived : public Base {
+// Definition of the Book class
+class Book {
 public:
-    void show() {
-        cout << "Accessing protected member: " << a << endl;
-    }
+    string title;  // Public member to store book title
+    string author; // Public member to store book author
+
+    void display(); // Declaration of member function to display book details
 };
+
+// Definition of the display() function outside the class
+void Book::display() {
+    cout << "Title: " << title << ", Author: " << author << endl;
+}
 
 int main() {
-    Derived d;
-    d.show();
+    Book b1, b2;  // Create two Book objects: b1 and b2
 
-    return 0;
+    // Assign values to the members of the first book
+    b1.title = "1984";
+    b1.author = "George Orwell";
+
+    // Assign values to the members of the second book
+    b2.title = "To Kill a Mockingbird";
+    b2.author = "Harper Lee";
+
+    // Display details of the first book
+    b1.display();
+
+    // Display details of the second book
+    b2.display();
+
+    return 0;  // Exit the program successfully
 }
 
