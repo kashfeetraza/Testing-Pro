@@ -1,25 +1,33 @@
 #include <iostream>
 using namespace std;
 
-// Base class
-class Base {
+// Define a class named Book
+class Book {
 public:
-    Base(int a) {
-        cout << "Base constructor: " << a << endl;
-    }
-};
+    string title;  // Public member to hold the book's title
+    string author; // Public member to hold the book's author
 
-// Derived class
-class Derived : public Base {
-public:
-    Derived(int a, int b) : Base(a) {
-        cout << "Derived constructor: " << b << endl;
+    // Member function to display book details
+    void display() {
+        cout << "Title: " << title << ", Author: " << author << endl;
     }
 };
 
 int main() {
-    Derived d(5, 10);  // Calls both Base and Derived constructors
+    Book b1, b2;  // Create two Book objects named b1 and b2
 
-    return 0;
+    // Set the details for the first book
+    b1.title = "1984";
+    b1.author = "George Orwell";
+
+    // Set the details for the second book
+    b2.title = "To Kill a Mockingbird";
+    b2.author = "Harper Lee";
+
+    // Display details of both books
+    b1.display();
+    b2.display();
+
+    return 0;  // Indicate successful program termination
 }
 
