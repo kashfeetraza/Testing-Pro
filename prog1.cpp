@@ -1,39 +1,67 @@
-#include <iostream>  // For input/output operations
-using namespace std; // So we don't have to prefix std:: before standard functions
+#include<iostream>
+#include<cmath>
+using namespace std;
 
-// Definition of the Rectangle class
-class Rectangle {
-private:
-    // Private member variables to store dimensions
-    int length, width;
-
-public:
-    // Public method to input values for length and width
-    void input(int l, int w) {
-        length = l;
-        width = w;
+class Exponent{
+    int x=9;
+    int z= 2;
+    public:
+    Exponent(){
+        cout<<"Exponent of the number is: "<<pow(x,z);
+        cout<<endl;
     }
-    
-    // Declaration of a method that calculates and prints the area
-    // Takes parameters instead of using member variables directly
-    void rectangle_area(int length, int width);
 
-    // Method to compute area using stored member variables
-    void area() {
-        rectangle_area(length, width);  // Calls the member function with current values
+};
+
+class Multiply{
+    int a=5;
+    int b=5;
+    public:
+    Multiply(){
+        cout<<"Multiply of the Number is: "<<a*b;
+        cout<<endl;
+    }
+
+};
+
+class division{
+    int a1=30;
+    int b1=5;
+    public:
+    division(){
+        cout<<"The Division of the number is: "<<a1/b1;
+        cout<<endl;
     }
 };
 
-// Definition of the rectangle_area method outside the class
-void Rectangle::rectangle_area(int length, int width) {
-    // Computes and prints the area using the provided parameters
-    cout << "Area of Rectangle: " << length * width << endl;
-}
+class Addition{
+    int x=90;
+    int y=80;
+    public:
+    Addition(){
+        cout<<"The Addition of these number is: "<<x+y;
+        cout<<endl;
+    }
 
-int main() {
-    Rectangle r;       // Create an instance of Rectangle
-    r.input(5, 3);     // Set length = 5, width = 3
-    r.area();          // Calls area() -> which calls rectangle_area()
-    return 0;          // Exit program
-}
+};
 
+class Substraction{
+    int i=100;
+    int o=50;
+    public:
+    Substraction(){
+        cout<<"The Substraction of these number is : "<<i-o;
+        cout<<endl;
+    }
+
+};
+
+int main(){
+    Exponent e;
+    division d;
+    Multiply m;
+    Addition add;
+    Substraction sub;
+    
+    return 0;
+}
