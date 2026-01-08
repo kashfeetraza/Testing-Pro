@@ -1,35 +1,46 @@
-#include <iostream>  // Includes standard input/output stream
-using namespace std; // Allows usage of standard namespace (e.g., cout) without prefix
+#include<iostream>
+using namespace std;
+string name,Class,Sem,sec;
+int Roll,obt,s1,s2,s3,s4,s5,s6,total=600;
+float average;
 
-// Global function to calculate and display the area of a rectangle
-void rectangle_area(int length, int width) {
-    cout << "Area of Rectangle: " << length * width << endl;
-}
+class student{
+    public:
+        student(){
+            cout<<"ENTER THE NAME:"<<endl;
+            cin>>name;
+            cout<<"ENTER THE ROLL#:"<<endl;
+            cin>>Roll;
+            cout<<"ENTER THE CLASS"<<endl;
+            cin>>Class;
+            cout<<"ENTER THE SEMESTER:"<<endl;
+            cin>>Sem;
+            cout<<"ENTER THE SECTION:"<<endl;
+            cin>>sec;
+            cout<<"ENTER THE SUB1:"<<endl;
+            cin>>s1;
+            cout<<"ENTER THE SUB2:"<<endl;
+            cin>>s2;
+            cout<<"ENTER THE SUB3:"<<endl;
+            cin>>s3;
+            cout<<"ENTER THE SUB4:"<<endl;
+            cin>>s4;
+            cout<<"ENTER THE SUB5:"<<endl;
+            cin>>s5;
+            cout<<"ENTER THE SUB6:"<<endl;
+            cin>>s6;
+            int obt_mark = s1+s2+s3+s4+s5+s6;
+            cout<<"OBTAINED MARKS:"<<obt_mark<<endl;
+            cout<<"TOTAL MARKS:"<<total<<endl;
+        }
 
-// Definition of the Rectangle class
-class Rectangle {
-private:
-    // Private data members to store rectangle dimensions
-    int length, width;
-
-public:
-    // Public method to set the values of length and width
-    void input(int l, int w) {
-        length = l;
-        width = w;
-    }
-
-    // Public method to compute the area using the global function
-    void area() {
-        // Calls the global rectangle_area function with current object's dimensions
-        rectangle_area(length, width);
-    }
 };
 
-int main() {
-    Rectangle r;       // Create an object of class Rectangle
-    r.input(5, 3);     // Set length = 5 and width = 3 using the input() method
-    r.area();          // Compute and print the area using the area() method
-    return 0;          // Exit the program
-}
 
+
+
+int main(){
+	student stu1;
+	cout<<"================"<<endl;
+	return 0;
+}
